@@ -1,0 +1,154 @@
+
+body {
+    background: linear-gradient(to right, #013e08, #010c17);
+    /* Full-screen background */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Center content */
+.container {
+    text-align: center;
+}
+
+/* Style the red circle button */
+.circle-btn {
+    display: block;
+    width: 150px; /* Bigger circle */
+    height: 150px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    animation: floatUpDown 2s infinite ease-in-out;
+}
+
+/* Make the button clickable */
+.circle-btn:hover {
+    background-color: darkred;
+}
+
+/* Animation for floating effect */
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Style for "Click Here" text */
+.click-text {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white; /* Change this if needed */
+}
+/* Center the greeting message */
+.message-container {
+    text-align: center;
+    color: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+}
+
+/* Style the heading */
+.message-container h1 {
+    font-size: 36px;
+    color: #FFD700; /* Gold */
+}
+
+/* Style the paragraph */
+.message-container p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Style the "Go Back" button */
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background-color: darkred;
+}
+
+/* Jumping cat */
+.cat {
+    width: 100px;
+    height: 100px;
+    background: url('cat.png') no-repeat center/contain; /* Replace with your cat image */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: jump 1.5s infinite ease-in-out;
+}
+
+/* Jumping animation */
+@keyframes jump {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-50px);
+    }
+}
+
+/* Make the page use flexbox */
+.content {
+    display: flex;
+    justify-content: space-between; /* Push text left & cat right */
+    align-items: center;
+    height: 100vh;
+    padding: 50px;
+}
+
+/* Message box on the left */
+.message-container {
+    width: 40%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    color: white;
+}
+
+/* Make the cat bigger & move it to the right */
+.cat {
+    width: 300px; /* Bigger size */
+    height: 300px;
+    background: url('cat.png') no-repeat center/contain;
+    position: relative;
+    margin-left: -120px; /* Moves the cat closer to the message box */
+    animation: jump 1.5s infinite ease-in-out;
+}
+
+/* Jumping animation */
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+}
